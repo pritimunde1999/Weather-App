@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #2D3258;
+    font-family: 'Inter', sans-serif;
+    color: white;
+   
+}
+
+#head{
+   
+    width: fit-content;
+    margin: auto;
+    margin-top: 40px;
+}
+
+#title{
+    
+    width: fit-content;
+    margin-top: 40px;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#search{
+    display: flex;
+    gap:20px;
+    width: fit-content;
+}
+
+#search-box{
+    
+    width: 30vw; 
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: #272A4C;
+    border-radius: 7px;
+    gap:10px;
+}
+
+#search-box > span{
+   font-size: 17px;
+   color: rgb(175, 173, 173);
+   background-color: #272A4C;
+}
+
+input{
+    border: none;
+    background-color: #272A4C;
+    font-weight: 300;
+}
+
+input:focus{
+    outline: none;
+}
+
+#add{
+    display: flex;
+    align-content: stretch;
+    border-radius: 7px;
+}
+#add > button{
+    padding: 20px 40px;
+    background-color: #403571;
+    border-radius: 7px;
+    border: 1px solid #403571;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+#info{
+ font-family: 'SF Pro Display', sans-serif;
+ font-weight: 400;
+ background-color: transparent;
+}
+
+
+#info-2{
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 400;
+    background-color: transparent;
+    margin-top: -40px;
+}
+
+
+#info >p,#info-2 >p, #info-2 >img{
+    background-color: transparent;
+}
+
+#info-2 >img{
+    background-color: transparent;
+    width:140px;
+}
+
+#card{
+    width:fit-content;
+    cursor: pointer;
+    position: relative;
+   
+}
+
+#info-2 >p{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+#weather-info{
+    display: flex;
+    gap:79px;
+    position: absolute;
+    top:20px;
+    background-color: transparent;
+    padding: 10px;
+}
+
+#card-container{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap:100px;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.items{
+    display: flex;
+
+}
+
+#extra{
+  padding: 10px;
+}
+
+
+@media (max-width:750px){
+    #search{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        width: fit-content;
+        margin: auto;
+    }
+    #search-box{
+       width: 70vw; 
+    }
+
+    #add{
+        margin: auto;
+    }
+
+    #card-container{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+}
+@media (max-width:1130px){
+    #card-container{
+        grid-template-columns: repeat(2,auto);
+        gap:50px;
+      }
+}
+@media (max-width:1230px){
+      #card-container{
+        gap:50px;
+      }
+}
