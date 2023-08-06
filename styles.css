@@ -133,12 +133,22 @@ input:focus{
 
 .items{
     display: flex;
-
+    border-bottom: 1px solid #5635B0;
+    margin-top: 5px;
 }
 
 #extra{
   padding: 10px;
+  display: none;
 }
+
+#item1{
+    margin-left: 10px;
+   
+}
+
+
+
 
 
 @media (max-width:750px){

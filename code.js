@@ -39,6 +39,12 @@ async function fetchData(cityName){
     const low = Math.round(data.main.temp_min);
     const city = data.name;
     const country = data.sys.country;
+    const feels_like = Math.round(data.main.feels_like);
+    const wind = Math.round(data.wind.speed);
+    const humidity = data.main.humidity;
+    const pressure = data.main.pressure;
+    const visibility = (data.visibility)/1000;
+
     const info = selectLogo(data);
     let logo = info[0];
     let desc = info[1];
@@ -56,14 +62,68 @@ async function fetchData(cityName){
      <img src="${logo}">
      <p style="font-size: 13px;">${desc}</p>
  </div>
-</div>`
+</div>
+<div id="extra">
+                    <div id="1st">
+                        <p>Feels like</p>
+                        <p style="font-size: 28px; font-weight: 500;">${feels_like}°</p>
+                    </div>
+                    <div class="items" id="2nd">
+                        <span class="material-symbols-outlined">
+                            thermostat
+                            </span>
+                         <p id="item1">High/Low</p> 
+                         <p id="item2" style="margin-left: 168px;">${high}/${low}</p>
+                    </div>
+                    <div class="items" id="3rd">
+                        <span class="material-symbols-outlined">
+                            air
+                            </span>
+                         <p id="item1">Wind</p> 
+                         <p id="item2" style="margin-left: 192px;">${wind} km/h</p>
+                    </div>
+                    <div class="items" id="4th">
+                        <span class="material-symbols-outlined">
+                            humidity_mid
+                            </span>
+                         <p id="item1">Humidity</p> 
+                         <p id="item2" style="margin-left: 178px;">${humidity}%</p>
+                    </div>
+
+                    <div class="items" id="5th">
+                        <span class="material-symbols-outlined">
+                            compress
+                            </span>
+                         <p id="item1">Pressure</p> 
+                         <p id="item2" style="margin-left: 160px;">${pressure} mb</p>
+                    </div>
+                    <div class="items" id="6th">
+                        <span class="material-symbols-outlined">
+                            visibility
+                            </span>
+                         <p id="item1">Visibility</p> 
+                         <p id="item2" style="margin-left: 168px;">${visibility} km</p>
+                    </div>
+                </div>`
 
   container.appendChild(card);
+  const extra = card.querySelector("#extra");
+  
+
+
+card.addEventListener("mouseover",()=>{
+    extra.style.display = "block";
+});
+
+card.addEventListener("mouseout",()=>{
+   extra.style.display = "none";
+});
+
  
  }
 
- 
- 
+
+
 function sortedArray(data){
     
     if(data.message === 'city not found'){
@@ -137,6 +197,9 @@ function sortedArray(data){
     let info = [imageUrl,desc];
     return info;
 }
+
+
+
 
 
 
