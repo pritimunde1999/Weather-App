@@ -1,4 +1,5 @@
 # Weather-App
+Deployed link : https://pritimunde1999.github.io/Weather-App/
 
 It is an interactive weather dashboard that allows users to add cities and view real-time weather information. The dashboard will have an input field and an "Add" button, and users will be able to add cities to a dynamically generated list of weather cards. Each card will display specific weather information, including an image corresponding to the weather condition (rainy, sunny, cloudy, windy). The application should provide a responsive and interactive user experience.
 Used the following OpenWeatherMap API endpoint: https://api.openweathermap.org/data/2.5/weather?q={CITY_NAME}&appid={API_KEY}&units=metric.
